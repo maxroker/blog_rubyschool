@@ -1,1 +1,14 @@
 <h2>Contact us</h2>
+
+<%= form_for :contact, url: contacts_path do |f| %>
+  <p>
+    <%= f.text_field :email, :placeholder => 'Email' %>
+  </p>
+  <p>
+    <%= f.text_area :message, :placeholder => 'Message' %>
+  </p>
+
+  <p>
+    <%= f.submit 'Send message' %>
+  </p>
+<% end %>
