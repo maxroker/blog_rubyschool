@@ -2,3 +2,28 @@
 <p>
   <%= @article.text %>
 </p>
+<br />
+<h2>Comments</h2>
+
+<% @article.comments.each do |comment| %>
+  <p><i><%= comment.author %> said:</i></p>
+  <p><%= comment.body %></p>
+  <hr />
+<% end %>
+
+<br />
+<h2>Add comment</h2>
+
+
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
+    <%= f.text_field :author, :placeholder => 'Author' %>
+  </p>
+  <p>
+    <%= f.text_area :body, :placeholder => 'Leave your commment' %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
