@@ -6,5 +6,4 @@ describe Contact do
 end
 
 
-# console command for testing:
-# rake spec
+# console command for testing: rake spec
