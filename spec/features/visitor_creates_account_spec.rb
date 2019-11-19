@@ -5,7 +5,7 @@ feature "Account Creation" do
     
     sign_up #method where we create new user located support/session_helper.rb
 
-    expect(page).to have_content 'mike'
+    #expect(page).to have_content 'mike'
     #expect(page).to have_content 'Welcome! You have signed up successfully.'
     expect(page).to have_content I18n.t('devise.registrations.signed_up')
   end
